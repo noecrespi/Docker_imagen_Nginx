@@ -182,3 +182,4 @@ si, para ello deberemos crear una máquina virtual los pasos a seguir lo podemos
 ![](img/M5.png)
 Se ha añadido con éxito.
 # Docker_imagen_Nginx
+# Docker_imagen_Nginx
