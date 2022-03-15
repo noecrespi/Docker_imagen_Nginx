@@ -1,4 +1,4 @@
-si![](img/Cabecera_Logo.png)
+![](img/Cabecera_Logo.png)
 ![](img/logo.jpeg)
 
 # Crear una imagen personalizada en docker: Nginx
@@ -181,5 +181,4 @@ si, para ello deberemos crear una máquina virtual los pasos a seguir lo podemos
 ![](img/M4.png)
 ![](img/M5.png)
 Se ha añadido con éxito.
-# Docker_imagen_Nginx
-# Docker_imagen_Nginx
+
