@@ -3,6 +3,7 @@
 
 # Crear una imagen personalizada en docker: Nginx
 
+Los archivos utilizados se pueden encontrar en el repositorio en una carpeta de llamada `nginx`.
 ## Página por defecto de Nginx
 
 1. Buscar la imagen en [dockerhub](https://hub.docker.com/). 
@@ -76,6 +77,8 @@ Con `-v` se crea un volumen.
 Se montará en el directorio local `~/Documentos/nginx...` localmente en el contenedor que se está ejecutando (`/usr/share/nginx/html`)
 
 ![](img/12.png)
+###### Usé el puerto 8082 porque el otro puerto estaba en uso 
+
 
 ## Crear una imagen personalizada
 
@@ -107,6 +110,29 @@ docker run --rm -d -p 8080:80 --name web webserver
 ```
 ![](img/20.png)
 
+## ¿Es posible publicar la web de pruebas mediante Microsoft Azure?
+
+Si, para ello deberemos crear una máquina virtual los pasos a seguir lo podemos encontrar [aquí](https://docs.google.com/document/d/13vzsd1948ccYS50FjtDKF9dn6-qeVR1Cd3_X9rAe_Zk/edit?usp=sharing). Una vez creada seguiremos los siguientes pasos:
+
+1. Entrar en la máquina virtual el cual queremos conecetar el docker. 
+
+![](img/M1.png)
+
+2. Clicar en `redes` (se ubica elado izquierdo del menú). 
+
+![](img/M2.png)
+
+3. Clicar en el botón azul que pone `Agregar regla de puerto de entrada `.
+
+![](img/M3.png)
+
+4. Rellenar los campos. En este caso tendremos que solo cambiar el `Servicio` y poner `HTTP`. 
+
+5. Clicar en `Agregar`. 
+
+![](img/M4.png)
+![](img/M5.png)
+Se ha añadido con éxito.
 
 ## Comandos a tener en cuenta 
 
@@ -156,29 +182,3 @@ docker stop nombreImagen
 ```
 docker image rm 
 ```
-
-
-## ¿Es posible publicar la web de pruebas mediante Microsoft Azure?
-
-si, para ello deberemos crear una máquina virtual los pasos a seguir lo podemos encontrar [aquí](https://docs.google.com/document/d/13vzsd1948ccYS50FjtDKF9dn6-qeVR1Cd3_X9rAe_Zk/edit?usp=sharing). Una vez creada seguiremos los siguientes pasos:
-
-1. Entrar en la máquina virtual el cual queremos conecetar el docker. 
-
-![](img/M1.png)
-
-2. Clicar en `rede`s` (se ubica elado izquierdo del menú). 
-
-![](img/M2.png)
-
-3. Clicar en el botón azul que pone `Agregar regla de puerto de entrada `.
-
-![](img/M3.png)
-
-4. Rellenar los campos. En este caso tendremos que solo cambiar el `Servicio` y poner `HTTP`. 
-
-5. Clicar en `Agregar`. 
-
-![](img/M4.png)
-![](img/M5.png)
-Se ha añadido con éxito.
-
